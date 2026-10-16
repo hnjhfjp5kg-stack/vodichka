@@ -1,15 +1,14 @@
-/* Настройки «Водички». Меняй значения здесь — app.js трогать не нужно. */
 window.WATER_CONFIG = {
-  DEMO: true,        // true — Pro включается кнопкой без оплаты. false — боевой режим (см. README)
-  PRICE_M: 199,      // цена за месяц
-  PRICE_Y: 1490,     // цена за год
-  CUR: '₽',          // валюта
-  TRIAL: 7,          // дней бесплатного периода (0 — без пробного периода)
-  PAY_M: '',         // ссылка на оплату месячного плана (Stripe Payment Link, ЮKassa и т. п.)
-  PAY_Y: '',         // ссылка на оплату годового плана
-  MANAGE_URL: '',    // ссылка на управление подпиской (портал клиента)
-  TG_API: '',        // адрес сервера-бота для Telegram Mini App (см. TELEGRAM.md)
-  STARS_M: 150,      // цена месяца в Telegram Stars ⭐ (должна совпадать с bot/.env)
-  STARS_Y: 1200,     // цена года в Telegram Stars ⭐
-  DEV: false         // true — показывать тестовую кнопку сброса кейса (или открой /?dev=1)
+  DEMO: false,
+  PRICE_M: 199,
+  PRICE_Y: 1490,
+  CUR: '₽',
+  TRIAL: 0,
+  PAY_M: '',
+  PAY_Y: '',
+  MANAGE_URL: '',
+  TG_API: https://vodichka-bot.onrender.com ,
+  STARS_M: 1,
+  STARS_Y: 5,
+  DEV: false
 };
