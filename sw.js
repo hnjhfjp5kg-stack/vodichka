@@ -1,5 +1,5 @@
 /* Service worker: офлайн-режим. Поменял файлы — увеличь номер версии V. */
-const V = 'vodichka-v2';
+const V = 'vodichka-v3';
 const ASSETS = ['./', 'index.html', 'css/style.css', 'js/config.js', 'js/telegram.js', 'js/app.js', 'manifest.webmanifest',
   'icons/icon.svg', 'icons/icon-192.png', 'icons/icon-512.png'];
 self.addEventListener('install', e => {
