@@ -7,7 +7,7 @@ window.WATER_CONFIG = {
   PAY_M: '',
   PAY_Y: '',
   MANAGE_URL: '',
-  TG_API: https://vodichka-bot.onrender.com ,
+  TG_API: 'https://vodichka-bot.onrender.com',
   STARS_M: 1,
   STARS_Y: 5,
   DEV: false
