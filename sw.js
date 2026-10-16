@@ -10,11 +10,9 @@ self.addEventListener('activate', e => {
 });
 self.addEventListener('fetch', e => {
   if (e.request.method !== 'GET' || new URL(e.request.url).origin !== location.origin) return;
-  e.respondWith(caches.match(e.request).then(hit => {
-    const net = fetch(e.request).then(res => {
-      if (res.ok) { const cp = res.clone(); caches.open(V).then(c => c.put(e.request, cp)); }
-      return res;
-    }).catch(() => hit || caches.match('index.html'));
-    return hit || net;
-  }));
+  // сначала сеть (всегда свежая версия), кэш — только когда нет интернета
+  e.respondWith(fetch(e.request, { cache: 'no-cache' }).then(res => {
+    if (res.ok) { const cp = res.clone(); caches.open(V).then(c => c.put(e.request, cp)); }
+    return res;
+  }).catch(() => caches.match(e.request).then(hit => hit || caches.match('index.html'))));
 });
