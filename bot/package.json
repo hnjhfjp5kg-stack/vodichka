@@ -1,0 +1,9 @@
+{
+  "name": "vodichka-bot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Сервер-бот для Telegram Mini App «Водичка»: оплата Telegram Stars и проверка Pro",
+  "main": "server.js",
+  "engines": { "node": ">=20.6" },
+  "scripts": { "start": "node server.js", "dev": "node --env-file=.env server.js", "test": "node test.js" }
+}
